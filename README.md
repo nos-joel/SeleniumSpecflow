@@ -10,7 +10,7 @@ A Selenium Specflow project
 
 ## Example
 
-Given the following Gherking feature
+Given the following Gherkin feature
 
 ```cs
 Feature: JS_Selenium_Docs
