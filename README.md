@@ -5,7 +5,7 @@ A Selenium Specflow project
 ## Installation
 (Assuming you already have Visual Studio installed)
 
-* Clone project (https://github.com/nos-joel/SeleniumCSharp.git)
+* Clone project (https://github.com/nos-joel/SeleniumSpecflow.git)
 * Once in Visual Studio: File > Open > Select project name
 
 ## Example
