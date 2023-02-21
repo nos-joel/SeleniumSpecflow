@@ -1,4 +1,6 @@
 
+using OpenQA.Selenium;
+
 namespace SeleniumSpecflow.StepDefinitions
 {
     [Binding]
@@ -10,12 +12,14 @@ namespace SeleniumSpecflow.StepDefinitions
         public void GivenIOpenTheBrowser()
         {
             utils.createDriver();
+           
         }
 
         [When(@"I navigate to the (.*)")]
         public void WhenINavigateToTheHttpsSelenium_Dev(string url)
         {
 
+           // DriverClass.driver.Navigate().GoToUrl(url);
             utils.OnDriver().Navigate().GoToUrl(url);
         }
 
@@ -26,5 +30,8 @@ namespace SeleniumSpecflow.StepDefinitions
             utils.On(PageObjects.Selenium.welcomemsg).AssertThat("innerText").Equals(message);
             utils.OnDriver().Quit();
         }
+
+       
+
     }
 }

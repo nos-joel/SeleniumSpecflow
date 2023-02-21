@@ -8,4 +8,3 @@ Scenario: Navigate to the Selenium with Javscript documentation
 	When I click the main Documentation button
 	And Press on the Javascript tab
 	Then The Javascript code example is shown
-	Then Close the browser

@@ -6703,11 +6703,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Joel\\source\\repos\\foo bar\\SeleniumSpecflow\\SeleniumSpecflow\\SeleniumSpecflow.csproj",
+      "projectUniqueName": "C:\\Users\\Joel\\Downloads\\specflowgithub\\SeleniumSpecflow\\SeleniumSpecflow.csproj",
       "projectName": "SeleniumSpecflow",
-      "projectPath": "C:\\Users\\Joel\\source\\repos\\foo bar\\SeleniumSpecflow\\SeleniumSpecflow\\SeleniumSpecflow.csproj",
+      "projectPath": "C:\\Users\\Joel\\Downloads\\specflowgithub\\SeleniumSpecflow\\SeleniumSpecflow.csproj",
       "packagesPath": "C:\\Users\\Joel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Joel\\source\\repos\\foo bar\\SeleniumSpecflow\\SeleniumSpecflow\\obj\\",
+      "outputPath": "C:\\Users\\Joel\\Downloads\\specflowgithub\\SeleniumSpecflow\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Joel\\AppData\\Roaming\\NuGet\\NuGet.Config",

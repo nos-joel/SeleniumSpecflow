@@ -122,9 +122,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line 10
  testRunner.Then("The Javascript code example is shown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 11
- testRunner.Then("Close the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
             }
             this.ScenarioCleanup();
         }

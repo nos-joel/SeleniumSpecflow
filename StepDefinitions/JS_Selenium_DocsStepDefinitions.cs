@@ -1,3 +1,4 @@
+using OpenQA.Selenium;
 using System;
 using TechTalk.SpecFlow;
 
@@ -11,8 +12,8 @@ namespace SeleniumSpecflow.StepDefinitions
         [Given(@"I navigate the to the selenium web page (.*)")]
         public void GivenINavigateTheToTheSeleniumWebPageHttpsSelenium_Dev(string url)
         {
-            utils.createDriver();
-            utils.OnDriver().Navigate().GoToUrl(url);
+           utils.createDriver();
+           utils.OnDriver().Navigate().GoToUrl(url);
         }
 
         [When(@"I click the main Documentation button")]
@@ -32,12 +33,6 @@ namespace SeleniumSpecflow.StepDefinitions
         {
             utils.WaitFor().VisibilityOfElement(PageObjects.Selenium.JsCodeSample, 3);
             utils.On(PageObjects.Selenium.JsCodeSample).AssertThat("class").Contains("active show");
-            
-        }
-
-        [Then(@"Close the browser")]
-        public void ThenCloseTheBrowser()
-        {
             utils.OnDriver().Quit();
         }
 

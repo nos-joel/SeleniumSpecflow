@@ -15,8 +15,9 @@ public class Utilities
 
     public IWebDriver driver = null;
 
-    OnActions onactions = new OnActions();
     WaitForActions waitforactions = new WaitForActions();
+    OnActions onactions = new OnActions();
+
 
     /// <summary>
     /// Method to create the desired browser driver. The driver is configured on the Configurations class
@@ -45,6 +46,7 @@ public class Utilities
                 driver = new ChromeDriver();
                 break;
         }
+
 
         waitforactions.Driver = driver;
         driver.Manage().Window.Minimize();

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "djOpX4rszQS+i+WO7yjNqPe44uY60bxDLpnpNDGN5A1i5xI2HUcF1LhUE4dEyZs0wTd+x/qjsbWUUeydIeXdZw==",
+  "dgSpecHash": "z94h9LTql26Xbcseq3gaXwJSK1UgPPTR2aQbKrmVgEv98VG63dI4qxszHK+0DSkz2vowdV7gDbT5FZ5Dq6D19Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Joel\\source\\repos\\foo bar\\SeleniumSpecflow\\SeleniumSpecflow\\SeleniumSpecflow.csproj",
+  "projectFilePath": "C:\\Users\\Joel\\Downloads\\specflowgithub\\SeleniumSpecflow\\SeleniumSpecflow.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Joel\\.nuget\\packages\\bodi\\1.5.0\\bodi.1.5.0.nupkg.sha512",
     "C:\\Users\\Joel\\.nuget\\packages\\fluentassertions\\6.2.0\\fluentassertions.6.2.0.nupkg.sha512",
