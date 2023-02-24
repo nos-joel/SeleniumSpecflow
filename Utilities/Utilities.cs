@@ -12,44 +12,16 @@ using OpenQA.Selenium.Support.UI;
  
 public class Utilities
 {
-
-    public IWebDriver driver = null;
-
-    WaitForActions waitforactions = new WaitForActions();
+    
+    private IWebDriver driver;
+    WaitForActions waitforactions;
     OnActions onactions = new OnActions();
 
-
-    /// <summary>
-    /// Method to create the desired browser driver. The driver is configured on the Configurations class
-    /// </summary>
-    public void createDriver()
+    public Utilities(IWebDriver _driver)
     {
-        switch (Configurations.driver_name)
-        {
-            case "CHROME":
-                driver = new ChromeDriver();
-                break;
-
-            case "FIREFOX":
-                driver = new FirefoxDriver();
-                break;
-
-            case "EDGE":
-                EdgeOptions options = new EdgeOptions();
-                options.AddArgument("start-maximized");
-                options.AddArgument("--disable-features=msHubApps");
-
-                driver = new EdgeDriver(options);
-                break;
-
-            default:
-                driver = new ChromeDriver();
-                break;
-        }
-
-
+        driver = _driver;
+        waitforactions = new WaitForActions();
         waitforactions.Driver = driver;
-        driver.Manage().Window.Minimize();
     }
 
     /// <summary>

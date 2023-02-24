@@ -6,32 +6,26 @@ namespace SeleniumSpecflow.StepDefinitions
     [Binding]
     public class VerifySeleniumEntryPageStepDefinitions
     {
-        Utilities utils = new Utilities();
+        Utilities utils;
+        IWebDriver driver;
 
-        [Given(@"I open the browser")]
-        public void GivenIOpenTheBrowser()
+        //Constructor to create the browser driver and also pass the driver to the Utilities instance.
+        VerifySeleniumEntryPageStepDefinitions(WebDriver webDriver)
         {
-            utils.createDriver();
-           
+            driver = webDriver.driver;
+            utils = new Utilities(driver);
         }
 
-        [When(@"I navigate to the (.*)")]
-        public void WhenINavigateToTheHttpsSelenium_Dev(string url)
+        [Given(@"I navigate to the (.*)")]
+        public void GivenINavigateToTheHttpsSelenium_Dev(string url)
         {
-
-           // DriverClass.driver.Navigate().GoToUrl(url);
             utils.OnDriver().Navigate().GoToUrl(url);
         }
-
 
         [Then(@"A welcome message appears like (.*)")]
         public void ThenAWelcomeMessageAppears(string message)
         {
             utils.On(PageObjects.Selenium.welcomemsg).AssertThat("innerText").Equals(message);
-            utils.OnDriver().Quit();
         }
-
-       
-
     }
 }

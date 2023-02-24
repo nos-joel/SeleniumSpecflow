@@ -7,12 +7,20 @@ namespace SeleniumSpecflow.StepDefinitions
     [Binding]
     public class JS_Selenium_DocsStepDefinitions
     {
-        Utilities utils = new Utilities();
+
+        Utilities utils;
+        IWebDriver driver;
+
+        //Constructor to create the browser driver and also pass the driver to the Utilities instance.
+       JS_Selenium_DocsStepDefinitions(WebDriver webDriver)
+        {
+            driver = webDriver.driver;
+            utils = new Utilities(driver);
+        }
 
         [Given(@"I navigate the to the selenium web page (.*)")]
         public void GivenINavigateTheToTheSeleniumWebPageHttpsSelenium_Dev(string url)
         {
-           utils.createDriver();
            utils.OnDriver().Navigate().GoToUrl(url);
         }
 
@@ -33,8 +41,6 @@ namespace SeleniumSpecflow.StepDefinitions
         {
             utils.WaitFor().VisibilityOfElement(PageObjects.Selenium.JsCodeSample, 3);
             utils.On(PageObjects.Selenium.JsCodeSample).AssertThat("class").Contains("active show");
-            utils.OnDriver().Quit();
         }
-
     }
 }
