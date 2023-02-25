@@ -16,6 +16,7 @@ public class Utilities
     public Utilities(IWebDriver _driver)
     {
         driver = _driver;
+
         waitforactions = new WaitForActions();
         waitforactions.Driver = driver;
     }
