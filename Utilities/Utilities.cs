@@ -1,9 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Edge;
-using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.Support.UI;
-
 
 /// <summary>
 /// This class holds most actions as creation of the driver, driver getter, and common selenium actions to
@@ -14,6 +9,7 @@ public class Utilities
 {
     
     private IWebDriver driver;
+
     WaitForActions waitforactions;
     OnActions onactions = new OnActions();
 
@@ -84,135 +80,4 @@ public class Utilities
     }
 
 
-} /* Utilities END */
-
-/// <summary>
-/// WaitForActions class holds the available methods when expecting for the state of an object.
-/// </summary>
-public class WaitForActions
-{
-    private IWebDriver driver;
-
-    public IWebDriver Driver
-    {
-        get { return driver; }
-        set { driver = value; }
-    }
-
-    /// <summary>
-    /// Method to wait for visiblity of element
-    /// </summary>
-    /// <param name="By selector"></param>
-    /// <param name="max_wait_time"></param>
-    public void VisibilityOfElement(By selector, double max_wait_time)
-    {
-        WebDriverWait wdw = new WebDriverWait(driver, TimeSpan.FromSeconds(max_wait_time));
-        wdw.Until(d => d.FindElement(selector));
-    }
-}
-
-/// <summary>
-/// The AssertOptions class is used to define the available options when performing an Assert over an object
-/// </summary>
-public class AssertOptions
-{
-    public string current_value;
-
-    /// <summary>
-    /// Assert option to validate whether an object's property exactly matches the expected_value
-    /// </summary>
-    public void Equals(string expected_value)
-    {
-        // Include private variable for Assert Contidtion (like Is,Contains). This would help
-        // include more validations in  case user leave something incomplete(AssertThat();) leaving the statement incomplete
-
-        Assert.Equal(expected_value, current_value);
-    }
-
-    /// <summary>
-    /// Assert option to validate whether an object's property partially matches the expected_value
-    /// </summary>
-    public void Contains(string expected_value)
-    {
-        Assert.Contains(expected_value, current_value);
-    }
-}
-
-/// <summary>
-/// OnActions class. It contains the defined list of available actions to perform over an element
-/// </summary>
-public class OnActions
-{
-    private IWebElement element;
-
-    public IWebElement Element
-    {
-        get { return element; }
-        set { element = value; }
-    }
-
-    AssertOptions assertoptions = new AssertOptions();
-
-    /// <summary>
-    /// Perform a Click over an object
-    /// </summary>
-    public void Click()
-    {
-        element.Click();
-    }
-
-    /// <summary>
-    /// Perform SendKeys
-    /// </summary>
-    /// <param name="input_string"></param>
-    public void Input(string input_string)
-    {
-        element.Clear(); //Clear input first
-        element.SendKeys(input_string);
-    }
-
-    /// <summary>
-    /// Define that an Assert with be performed on a object
-    /// </summary>
-    /// <param name="object's attribute_name"></param>
-    /// <returns>AssertOptions</returns>
-    public AssertOptions AssertThat(string attribute_name)
-    {
-
-        string current_value = element.GetAttribute(attribute_name);
-
-        assertoptions.current_value = current_value;
-
-        return assertoptions;
-    }
-
-    /// <summary>
-    /// Select dropdown by value
-    /// </summary>
-    /// <param name="value"></param>
-    public void SelectByValue(string value)
-    {
-        SelectElement select = new SelectElement(element);
-        select.SelectByValue(value);
-    }
-
-    /// <summary>
-    /// Select dropdown by index
-    /// </summary>
-    /// <param name="value"></param>
-    public void SelectByIndex(int value)
-    {
-        SelectElement select = new SelectElement(element);
-        select.SelectByIndex(value);
-    }
-
-    /// <summary>
-    /// Select dropdown by text
-    /// </summary>
-    /// <param name="value"></param>
-    public void SelectByText(string value)
-    {
-        SelectElement select = new SelectElement(element);
-        select.SelectByText(value);
-    }
 }

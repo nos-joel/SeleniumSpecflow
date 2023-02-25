@@ -19,7 +19,7 @@ namespace SeleniumSpecflow.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class VerifySeleniumEntryPageFeature : object, Xunit.IClassFixture<VerifySeleniumEntryPageFeature.FixtureData>, System.IDisposable
+    public partial class FacebookLoginErrorMessageFeature : object, Xunit.IClassFixture<FacebookLoginErrorMessageFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace SeleniumSpecflow.Features
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "VerifySeleniumEntryPage.feature"
+#line 1 "FacebookLoginErrorMessage.feature"
 #line hidden
         
-        public VerifySeleniumEntryPageFeature(VerifySeleniumEntryPageFeature.FixtureData fixtureData, SeleniumSpecflow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public FacebookLoginErrorMessageFeature(FacebookLoginErrorMessageFeature.FixtureData fixtureData, SeleniumSpecflow_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace SeleniumSpecflow.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "VerifySeleniumEntryPage", "Verify welcome message on Selenium web page", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "FacebookLoginErrorMessage", "Attempt to login to Facebook using invalid credentials", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -80,14 +80,14 @@ namespace SeleniumSpecflow.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Once I land on the selenium web page, a welcome message is displayed")]
-        [Xunit.TraitAttribute("FeatureTitle", "VerifySeleniumEntryPage")]
-        [Xunit.TraitAttribute("Description", "Once I land on the selenium web page, a welcome message is displayed")]
-        public virtual void OnceILandOnTheSeleniumWebPageAWelcomeMessageIsDisplayed()
+        [Xunit.SkippableFactAttribute(DisplayName="A user cannot authenticate to FB using invalid credentials.")]
+        [Xunit.TraitAttribute("FeatureTitle", "FacebookLoginErrorMessage")]
+        [Xunit.TraitAttribute("Description", "A user cannot authenticate to FB using invalid credentials.")]
+        public virtual void AUserCannotAuthenticateToFBUsingInvalidCredentials_()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Once I land on the selenium web page, a welcome message is displayed", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A user cannot authenticate to FB using invalid credentials.", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -109,10 +109,17 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 6
- testRunner.Given("I navigate the to the page https://selenium.dev", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I navigate the to the page https://www.facebook.com/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 7
- testRunner.Then("A welcome message appears like Selenium automates browsers. That\'s it!", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("The user enter the username fakeuser123 and password fakeuser123", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 8
+ testRunner.And("The user clicks the Login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 9
+ testRunner.Then("The user cannot autheticate and the following message is displayed The email or m" +
+                        "obile number you entered isn’t connected to an account.", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -125,12 +132,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                VerifySeleniumEntryPageFeature.FeatureSetup();
+                FacebookLoginErrorMessageFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                VerifySeleniumEntryPageFeature.FeatureTearDown();
+                FacebookLoginErrorMessageFeature.FeatureTearDown();
             }
         }
     }
