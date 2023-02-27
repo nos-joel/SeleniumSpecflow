@@ -10,7 +10,12 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "0d4efaee-faa2-4d03-a587-4892dac05ecb": {
+      "ProjectGuid": "0d4efaee-faa2-4d03-a587-4892dac05ecb",
+      "DisplayName": "SeleniumSpecflow",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }
