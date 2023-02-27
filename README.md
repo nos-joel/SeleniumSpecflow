@@ -2,8 +2,6 @@
 
 A Selenium Specflow project
 
-# Also see branch feature/driver-creation
-
 ## Installation
 (Assuming you already have Visual Studio installed)
 
