@@ -1,19 +1,23 @@
-using OpenQA.Selenium;
-using System;
-using TechTalk.SpecFlow;
+﻿using OpenQA.Selenium;
 
 namespace SeleniumSpecflow.StepDefinitions
 {
     [Binding]
-    public class JS_Selenium_DocsStepDefinitions
+    public class SeleniumStepDefinitions
     {
-        Utilities utils = new Utilities();
 
-        [Given(@"I navigate the to the selenium web page (.*)")]
-        public void GivenINavigateTheToTheSeleniumWebPageHttpsSelenium_Dev(string url)
+        Utilities utils;
+
+        //Constructor to create the browser driver and also pass the driver to the Utilities instance.
+        SeleniumStepDefinitions(WebDriver webDriver)
         {
-           utils.createDriver();
-           utils.OnDriver().Navigate().GoToUrl(url);
+            utils = new Utilities(webDriver.driver);
+        }
+
+        [Given(@"I navigate the to the page (.*)")]
+        public void GivenINavigateTheToThePage(string url)
+        {
+            utils.OnDriver().Navigate().GoToUrl(url);
         }
 
         [When(@"I click the main Documentation button")]
@@ -33,8 +37,12 @@ namespace SeleniumSpecflow.StepDefinitions
         {
             utils.WaitFor().VisibilityOfElement(PageObjects.Selenium.JsCodeSample, 3);
             utils.On(PageObjects.Selenium.JsCodeSample).AssertThat("class").Contains("active show");
-            utils.OnDriver().Quit();
         }
 
+        [Then(@"A welcome message appears like (.*)")]
+        public void ThenAWelcomeMessageAppears(string message)
+        {
+            utils.On(PageObjects.Selenium.welcomemsg).AssertThat("innerText").Equals(message);
+        }
     }
 }

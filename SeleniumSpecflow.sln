@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumSpecflow", "SeleniumSpecflow.csproj", "{0D4EFAEE-FAA2-4D03-A587-4892DAC05ECB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D4EFAEE-FAA2-4D03-A587-4892DAC05ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D4EFAEE-FAA2-4D03-A587-4892DAC05ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D4EFAEE-FAA2-4D03-A587-4892DAC05ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D4EFAEE-FAA2-4D03-A587-4892DAC05ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A055AB62-67B1-46E1-882F-C0C5B7F0C285}
+	EndGlobalSection
+EndGlobal

@@ -2,8 +2,6 @@
 
 Verify welcome message on Selenium web page
 
-@tag1
 Scenario: Once I land on the selenium web page, a welcome message is displayed
-	Given I open the browser
-	When I navigate to the https://selenium.dev
+	Given I navigate the to the page https://selenium.dev
 	Then A welcome message appears like Selenium automates browsers. That's it!

@@ -83,14 +83,12 @@ namespace SeleniumSpecflow.Features
         [Xunit.SkippableFactAttribute(DisplayName="Navigate to the Selenium with Javscript documentation")]
         [Xunit.TraitAttribute("FeatureTitle", "JS_Selenium_Docs")]
         [Xunit.TraitAttribute("Description", "Navigate to the Selenium with Javscript documentation")]
-        [Xunit.TraitAttribute("Category", "tag1")]
         public virtual void NavigateToTheSeleniumWithJavscriptDocumentation()
         {
-            string[] tagsOfScenario = new string[] {
-                    "tag1"};
+            string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Navigate to the Selenium with Javscript documentation", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 6
+#line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -110,16 +108,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 7
- testRunner.Given("I navigate the to the selenium web page https://selenium.dev", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 6
+ testRunner.Given("I navigate the to the page https://selenium.dev", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 8
+#line 7
  testRunner.When("I click the main Documentation button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 9
+#line 8
  testRunner.And("Press on the Javascript tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 10
+#line 9
  testRunner.Then("The Javascript code example is shown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
