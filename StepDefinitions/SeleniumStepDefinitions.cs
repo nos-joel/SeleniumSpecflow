@@ -11,7 +11,7 @@ namespace SeleniumSpecflow.StepDefinitions
         //Constructor to create the browser driver and also pass the driver to the Utilities instance.
         SeleniumStepDefinitions(WebDriver webDriver)
         {
-            utils = new Utilities(webDriver.driver);
+            utils = new Utilities(webDriver.Driver);
         }
 
         [Given(@"I navigate the to the page (.*)")]
