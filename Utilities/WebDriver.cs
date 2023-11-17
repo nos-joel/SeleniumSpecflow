@@ -11,6 +11,12 @@ public class WebDriver : IDisposable
 {
     public IWebDriver driver;
 
+    public IWebDriver Driver
+    {
+        get { return driver; }
+        set { Driver = value; }
+    }
+    
     public WebDriver()
     {
         driver = getDriver();
@@ -24,7 +30,7 @@ public class WebDriver : IDisposable
         switch (Configurations.driver_name)
         {
             case "CHROME":
-                driver = new ChromeDriver();
+                driver = new ChromeDriver(Configurations.drivers_folder_path);
                 break;
 
             case "FIREFOX":
@@ -40,7 +46,7 @@ public class WebDriver : IDisposable
                 break;
 
             default:
-                driver = new ChromeDriver();
+                driver = new ChromeDriver(Configurations.drivers_folder_path);
                 break;
         }
         
