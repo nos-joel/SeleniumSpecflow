@@ -11,7 +11,7 @@ namespace SeleniumSpecflow.StepDefinitions
         //Constructor to create the browser driver and also pass the driver to the Utilities instance.
         FacebookStepDefinitions(WebDriver webDriver)
         {
-            utils = new Utilities(webDriver.driver);
+            utils = new Utilities(webDriver.Driver);
         }
 
         [When(@"The user enter the username (.*) and password (.*)")]
