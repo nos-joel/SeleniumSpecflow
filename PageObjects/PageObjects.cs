@@ -4,8 +4,8 @@ public static class PageObjects
     public static class Selenium
     {
         public static By documentation = By.LinkText("Documentation");
-        public static By JsTab = By.Id("tabs-3-04-tab");
-        public static By JsCodeSample = By.Id("tabs-3-04");
+        public static By JsTab = By.Id("tabs-03-04-tab");
+        public static By JsCodeSample = By.Id("tabs-03-04");
         public static By welcomemsg = By.XPath("//h1");
     }
     
